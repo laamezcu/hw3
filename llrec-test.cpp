@@ -92,8 +92,8 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
-    isOdd(predicate);
-    Node* filtered = llfilter(head, predicate);
+    isOdd(list);
+    Node* filtered = llfilter(head, list);
 
     cout << "Filtered list (evens only): ";
     print(filtered);

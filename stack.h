@@ -15,7 +15,7 @@ public:
         return std::vector<T>::empty();
     }
     size_t size() const {
-        return std::vector
+        return std::vector<T>::size();
     }
     void push(const T& item) {
         std::vector<T>::push_back(item);
