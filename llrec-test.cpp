@@ -27,6 +27,12 @@ void print(Node* head);
  */
 void dealloc(Node* head);
 
+struct isOdd {
+    bool operator()(int value) {
+        return value % 2 != 0;
+    }
+};
+
 
 Node* readList(const char* filename)
 {
@@ -86,7 +92,13 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    isOdd(predicate);
+    Node* filtered = llfilter(head, predicate);
 
+    cout << "Filtered list (evens only): ";
+    print(filtered);
+
+    dealloc(filtered);
 
 
     
